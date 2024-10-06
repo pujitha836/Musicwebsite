@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #D2DCE6;
+    padding-top: 80px; 
+    padding-bottom: 50px; 
+}
+
+/* Fixed Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 30px;
+    z-index: 1000;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 50px; 
+    height: auto; 
+    margin-right: 5px; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a:hover {
+    color: #ff5733; 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('./beats.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px; 
+    min-height: 70vh; 
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff5733;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Music Section */
+.music {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(pink, skyblue);
+}
+
+.music h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.music-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.music-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.music-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Playlist Section */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.playlist {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(33% - 20px); 
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.playlist:hover {
+     transform: scale(1.05); 
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.playlist img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.playlist h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #007BFF;
+}
+
+.playlist p {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .playlist {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .playlist {
+        width: 100%;
+    }
+}
+
+/* Fixed Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 50px;
+}
+
+
+
+/* About */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the team members */
+    gap: 20px; /* Space between team members */
+    margin-top: 20px; /* Add space above the team section */
+}
+
+.team-member {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Fixed width for team members */
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: border 0.5s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .team-member {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+/* footer */
+.music-footer {
+    background-color: #181818;
+    color: #fff;
+    padding: 50px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Ensures even spacing between columns */
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    padding-bottom: 30px;
+    max-width: 1200px; /* Added to center content and control width */
+    margin: 0 auto; /* Centers the footer content */
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 200px; /* Ensures the logo section has enough space */
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    color: #1db954;
+}
+
+.footer-logo p {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    min-width: 200px; /* Ensures spacing for each column */
+}
+
+.footer-column {
+    flex: 1; /* Distribute equal space */
+}
+
+.footer-column h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #999;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #1db954;
+}
+
+.app-store {
+    width: 120px;
+    margin-top: 10px;
+}
+
+.footer-social {
+    flex: 1;
+    text-align: right; /* Align the social section to the right */
+}
+
+.footer-social h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-social ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+}
+
+.footer-social ul li {
+    margin-left: 15px;
+}
+
+.footer-social ul li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-social ul li a:hover {
+    color: #1db954;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #999;
+}
+

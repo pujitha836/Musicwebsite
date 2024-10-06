@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Dashboard</title>
+    <link rel="stylesheet" href="../public/assests/css/styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <header>
+        Music Website Dashboard
+        <nav>
+            <ul>
+                <li><a href="./browse.html">Browse</a></li>
+                <li><a href="./playlist.html">Playlists</a></li>
+                <li><a href="./register.html">Register</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>User Information</h2>
+
+        <div class="controls">
+            <button id="add-user">Add User</button>
+            <input type="text" id="filter-name" placeholder="Filter by name">
+            <button class="save-button" id="save-button" style="display:none;">Save</button>
+        </div>
+
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Favorite Artist</th>
+                    <th>Number of Playlists</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated by JavaScript -->
+            </tbody>
+        </table>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="../public/assests/css/js/script.js"></script> <!-- External JavaScript -->
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music World</title>
+    <link rel="stylesheet" href="../public/assests/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../public/image/Music.png" alt="Music Logo">
+                <h1>Vibess</h1>
+            </div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./browse.html">Browse</a></li>
+                <li><a href="#" id="playlist-link">Playlists</a></li>
+                <li><a href="#" id="register-link">Register</a></li> <!-- Updated to handle Register -->
+                <li><a href="#" id="about-link">About Us</a></li> <!-- New link for About Us -->
+                <li><a href="./dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Music Vibess</h2>
+            <p>Your destination for the latest music and news.</p>
+            <a href="#music" class="btn">Discover Music</a>
+        </div>
+    </section>
+
+    <section id="music" class="music">
+        <h2>Featured Music</h2>
+        <div class="music-grid">
+            <div class="music-item">
+                <img src="../public/image/x.png" alt="Album 1">
+                <h3>Travel</h3>
+                <p>Armaan Malik</p>
+            </div>
+            <div class="music-item">
+                <img src="../public/image/y.png" alt="Album 2">
+                <h3>Featured</h3>
+                <p>Arjit Singh</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section to dynamically load the playlist, register, and about content -->
+    <section id="dynamic-content"></section>
+
+    <footer class="music-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Vibess Music</h2>
+                <p>Your ultimate music destination</p>
+            </div>
+    
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Top Charts</a></li>
+                        <li><a href="#">Playlists</a></li>
+                        <li><a href="#">Genres</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Artist Support</a></li>
+                        <li><a href="#">Report an Issue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Get the App</h3>
+                    <p>Stream on the go!</p>
+                    <a href="#"><img src="appstore.png" alt="App Store" class="app-store"></a>
+                    <a href="#"><img src="playstore.png" alt="Play Store" class="app-store"></a>
+                </div>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vibess. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        document.getElementById('playlist-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadContent('playlist.html');
+        });
+
+        document.getElementById('register-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadContent('register.html');
+        });
+
+        document.getElementById('about-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadContent('about.html'); // Load the About Us page
+        });
+
+        function loadContent(page) {
+            // Hide other sections
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('music').style.display = 'none';
+
+            // Fetch the content
+            fetch(page)
+                .then(response => response.text())
+                .then(html => {
+                    const contentSection = document.getElementById('dynamic-content');
+                    contentSection.innerHTML = html;
+                    window.scrollTo({
+                        top: contentSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                })
+                .catch(error => console.error('Error loading the content:', error));
+        }
+
+        window.onpopstate = function(event) {
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+            if (!isLoggedIn) {
+                window.location.href = './index.html';
+            }
+        };
+    </script>
+</body>
+</html>
