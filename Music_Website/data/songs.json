@@ -1,0 +1,76 @@
+{
+    "songs": [
+      {
+        "id": 1,
+        "title": "Chill Vibes",
+        "artist": "Artist A",
+        "album": "Relax and Unwind",
+        "year": 2021,
+        "coverImage": "chillvibes.jpeg"
+      },
+      {
+        "id": 2,
+        "title": "Workout Beats",
+        "artist": "Artist B",
+        "album": "Power Moves",
+        "year": 2022,
+        "coverImage": "workout.jpeg"
+      },
+      {
+        "id": 3,
+        "title": "Top Hits 2024",
+        "artist": "Various Artists",
+        "album": "Hits of 2024",
+        "year": 2024,
+        "coverImage": "tophits.jpeg"
+      },
+      {
+        "id": 4,
+        "title": "Track 1",
+        "artist": "Arijit Singh",
+        "album": "Best of Arijit",
+        "year": 2019,
+        "coverImage": "lis1.png"
+      },
+      {
+        "id": 5,
+        "title": "Track 2",
+        "artist": "K.S. Chithra",
+        "album": "Melodies",
+        "year": 2020,
+        "coverImage": "lis2.png"
+      },
+      {
+        "id": 6,
+        "title": "Track 3",
+        "artist": "A. R. Rahman",
+        "album": "Soulful Tunes",
+        "year": 2021,
+        "coverImage": "lis3.png"
+      },
+      {
+        "id": 7,
+        "title": "Song A",
+        "artist": "Shreya Ghoshal",
+        "album": "Romantic Hits",
+        "year": 2018,
+        "coverImage": "fav1.png"
+      },
+      {
+        "id": 8,
+        "title": "Song B",
+        "artist": "P. Susheela",
+        "album": "Classic Collection",
+        "year": 2015,
+        "coverImage": "fav2.png"
+      },
+      {
+        "id": 9,
+        "title": "Song C",
+        "artist": "Lata Mangeshkar",
+        "album": "Golden Voice",
+        "year": 2012,
+        "coverImage": "fav3.png"
+      }
+    ]
+  }
